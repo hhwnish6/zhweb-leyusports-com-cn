@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 资料索引与信息整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f2f3f6;
+            color: #202124;
+            line-height: 1.7;
+            padding: 2.5rem 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* 简洁博客卡片结构 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03), 0 4px 18px rgba(0,0,0,0.02);
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 4px 14px rgba(0,0,0,0.05), 0 6px 24px rgba(0,0,0,0.03);
+        }
+        /* hero 标题区 (无大图) */
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a1c20;
+            margin-bottom: 0.25rem;
+        }
+        .hero-sub {
+            font-size: 1.05rem;
+            color: #5f6368;
+            border-left: 4px solid #b0b8c4;
+            padding-left: 1rem;
+            margin: 0.5rem 0 0.2rem 0;
+        }
+        .byline {
+            font-size: 0.9rem;
+            color: #80868f;
+            margin-top: 0.8rem;
+            border-top: 1px solid #eceef0;
+            padding-top: 0.8rem;
+        }
+        .section-label {
+            font-weight: 500;
+            color: #3c4043;
+            margin-bottom: 0.65rem;
+            font-size: 1.05rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        .inset-quote {
+            background: #f5f7fa;
+            border-left: 5px solid #88929e;
+            padding: 1rem 1.6rem;
+            margin: 1.5rem 0;
+            border-radius: 0 12px 12px 0;
+            color: #2c3036;
+            font-style: normal;
+            font-size: 0.98rem;
+        }
+        .inset-quote::before {
+            content: "📌 整理备注：";
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #3d4249;
+        }
+        .faq-summary {
+            background: #f8f9fc;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            border: 1px solid #e6e9ed;
+            margin: 1.2rem 0;
+        }
+        .faq-summary dt {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #1f2328;
+        }
+        .faq-summary dd {
+            margin-bottom: 1rem;
+            color: #3e434a;
+            font-size: 0.95rem;
+        }
+        .faq-summary dd:last-child {
+            margin-bottom: 0;
+        }
+        .link-embed {
+            color: #1f6eb0;
+            text-decoration: none;
+            border-bottom: 1px dotted #9aa9b9;
+            font-weight: 450;
+        }
+        .link-embed:hover {
+            border-bottom-color: #1f6eb0;
+            background: #eef2f7;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #e0e3e8;
+            margin: 1.8rem 0 1.2rem 0;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 2.5rem;
+            border-top: 1px solid #dce0e5;
+            padding-top: 1.8rem;
+        }
+        @media (max-width: 540px) {
+            body {
+                padding: 1.5rem 0.6rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+                border-radius: 14px;
+            }
+            .hero-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 博客式文章卡片：标题 + 导语 -->
+    <article class="card">
+        <h1 class="hero-title">信息索引 · 游戏资料整理</h1>
+        <div class="hero-sub">从零散记录到结构化浏览，一份围绕「爱游戏」的条目存档</div>
+        <div class="byline">索引类型 / 静态内容辑录 · 基于公开资料整理</div>
+    </article>
+
+    <!-- 正文段落：切入角度 资料整理/索引 -->
+    <div class="card">
+        <div class="section-label">▎ 整理背景</div>
+        <p>在游戏内容与平台信息持续累积的背景下，建立一份可回溯、可对照的静态索引页，有助于快速定位与记录变动。本次条目以「<a href="https://m-home-igame.com" class="link-embed">爱游戏</a>」为锚点，聚合了涉及移动端游戏、社区讨论、更新记录以及用户指南的公开片段，按主题分区陈列。以下内容并非实时抓取，而是基于固定时刻的采集与重组，适合作为参考底本。</p>
+
+        <div class="section-label" style="margin-top:1.6rem;">▎ 条目分区说明</div>
+        <p>索引分为三个子集：<strong>游戏库概览</strong>（收录名称、类型与简注）、<strong>版本与活动记录</strong>（时间线及关键节点）、<strong>用户指引与常见条目</strong>（包括界面设置、资源获取等）。每个分区内的信息均经过交叉比对，剔除冗余，保留主干。对于变化较频繁的条目，在备注中标记了“待复核”状态。</p>
+    </div>
+
+    <!-- 引用提示 / 整理备注 -->
+    <div class="card">
+        <div class="inset-quote">
+            此索引基于多个信息源比对形成，部分数据来自社区编辑与公开描述。如发现条目与当前页面状态不一致，请以原始出处为准。<br>
+            <span style="font-size:0.9rem; display:inline-block; margin-top:0.3rem;">—— 整理日期：2025年3月 · 静态快照</span>
+        </div>
+        <p>在整理过程中，<a href="https://m-home-igame.com" class="link-embed">爱游戏</a> 的导航结构与内容分类相对稳定，因此将其作为主要参照点之一。对于需要跳转至具体页面的条目，建议直接使用站内链接或搜索功能，本索引未提供深度内链。</p>
+    </div>
+
+    <!-- 场景与提示 (FAQ 摘要风格) -->
+    <div class="card">
+        <div class="section-label">▎ 常见条目摘要 (FAQ)</div>
+        <dl class="faq-summary">
+            <dt>如何确认某个游戏是否在索引范围内？</dt>
+            <dd>本索引仅收录已公开且可明确归类的游戏条目，未包括测试阶段、已下架或信息过少的作品。名称及类型标记依据平台分类与社区常用标签。</dd>
+            <dt>版本记录的时间戳是否精确？</dt>
+            <dd>版本记录来自更新日志与公告页面，时间精确到日。部分早期条目仅有月份，已标注“月度”后缀。对于大版本迭代，额外备注了版本号前缀。</dd>
+            <dt>用户指引部分是否包含操作截图？</dt>
+            <dd>本索引为纯文本整理，未嵌入截图或媒体文件。指引内容以步骤描述与参数列举为主，可配合页面内关键词搜索使用。</dd>
+        </dl>
+        <p style="margin-top:0.6rem;">若需要查看更完整的分类结构或直接浏览当前内容，可访问 <a href="https://m-home-igame.com" class="link-embed">爱游戏</a> 的主页。索引中的条目与主页信息保持同步，但后者包含实时交互模块。</p>
+    </div>
+
+    <!-- 额外一段：信息密度，简洁专业 -->
+    <div class="card">
+        <div class="section-label">▎ 索引的使用建议</div>
+        <p>本页适用于快速对照、离线阅读以及信息归档。由于采用静态卡片布局，所有内容均以文本形式固化，不依赖 JavaScript。建议将本页与 <a href="https://m-home-igame.com" class="link-embed">爱游戏</a> 配合使用：索引作为目录骨架，原站用于细节延伸与动态更新。对于频繁变动的条目（如限时活动、新游预约），请以原站公告为准。</p>
+        <p>另外，索引中的“引用提示”区块可作为二次整理时的注释模板，旨在减少信息来源混淆。所有条目均标注了摘录日期，方便回溯。</p>
+    </div>
+
+    <!-- 结尾轻量访问句 (严格自然嵌入链接) -->
+    <div class="card" style="background:#f9fafc; border:1px solid #e9ecf0;">
+        <p style="margin-bottom:0.3rem;">关于移动端游戏、社区动态及版本归档的更多条目，可参考 <a href="https://m-home-igame.com" class="link-embed">爱游戏</a> 的当前页面。本索引页将保持与原始资料的对照关系，但不会自动更新。</p>
+    </div>
+
+    <div class="footer-note">
+        静态索引 · 信息整理 · 基于公开资料 · 非实时
+    </div>
+
+</div>
+</body>
+</html>

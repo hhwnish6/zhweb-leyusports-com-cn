@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞技宝 – 产品说明与访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f5f7;
+            color: #2d3436;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* hero */
+        .hero {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 3.2rem 2.8rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e9eef2;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.8rem;
+            color: #1e272e;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #636e72;
+            max-width: 640px;
+            margin: 0 auto 1.8rem auto;
+        }
+
+        .hero .intro-text {
+            background: #f0f3f5;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            color: #2d3436;
+            display: inline-block;
+            border: 1px solid #dde5e8;
+        }
+
+        .hero .intro-text a {
+            color: #2b5876;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #cbd5db;
+            transition: border-color 0.2s;
+        }
+
+        .hero .intro-text a:hover {
+            border-bottom-color: #2b5876;
+        }
+
+        /* 卡片网格 */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2rem 2.2rem;
+            border: 1px solid #e5eaef;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.9rem;
+            color: #1e272e;
+            border-left: 5px solid #6c7a89;
+            padding-left: 0.7rem;
+        }
+
+        .card p, .card ul {
+            font-size: 0.98rem;
+            color: #3d4a4f;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            padding: 0.3rem 0 0.3rem 1.4rem;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #6b7a84;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tagline {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 2.4rem;
+            border: 1px solid #e5eaef;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2.8rem;
+            font-size: 1rem;
+            color: #3d4a4f;
+        }
+
+        .tagline strong {
+            color: #1e272e;
+            font-weight: 600;
+        }
+
+        .tagline a {
+            color: #2b5876;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid #d5dee3;
+            transition: border-color 0.2s;
+        }
+
+        .tagline a:hover {
+            border-bottom-color: #2b5876;
+        }
+
+        .faq-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.4rem 1.8rem;
+            border: 1px solid #e5eaef;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            color: #1e272e;
+        }
+
+        .faq-item p {
+            font-size: 0.92rem;
+            color: #4b5a61;
+        }
+
+        .footer-note {
+            background: #eceff2;
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5f6c72;
+            border: 1px solid #dae1e6;
+        }
+
+        .footer-note a {
+            color: #2b5876;
+            text-decoration: none;
+            border-bottom: 1px dashed #b4c1ca;
+        }
+
+        .footer-note a:hover {
+            border-bottom-style: solid;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                padding: 2.2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+            .faq-section {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            .tagline {
+                padding: 1.3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .hero .intro-text {
+                font-size: 0.95rem;
+                padding: 1rem 1.2rem;
+            }
+            .footer-note {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- hero 区域：摘要 -->
+    <div class="hero">
+        <h1>竞技宝 · 一个站点</h1>
+        <p class="sub">一份关于平台定位、使用场景与可靠边界的说明</p>
+        <div class="intro-text">
+            欢迎了解 <a href="https://ai-jingjibao.com">竞技宝</a>，一个面向实用需求提供信息与辅助服务的平台。这里不堆砌概念，只关注你能用它做什么、以及应当保持怎样的预期。
+        </div>
+    </div>
+
+    <!-- 特点 + 亮点 卡片 -->
+    <div class="grid-2">
+        <div class="card">
+            <h2>▍亮点速览</h2>
+            <ul>
+                <li>界面简洁，信息层级清晰，适合快速浏览与查找</li>
+                <li>内容更新保持节奏，避免信息过载</li>
+                <li>面向日常使用场景，不做过度包装</li>
+                <li>功能入口直接，减少不必要的跳转</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>▍使用建议</h2>
+            <ul>
+                <li>根据自身需求访问对应板块，不必全量翻阅</li>
+                <li>对于工具或数据类功能，建议先小范围试用</li>
+                <li>留意页面上的说明文字，避免误解适用范围</li>
+                <li>如遇到不确定的内容，可通过站内反馈渠道核实</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 可信说明 + 场景 -->
+    <div class="tagline">
+        <strong>关于可信，但保持克制。</strong> 竞技宝力求提供可靠的内容与稳定的服务，但任何线上资源都可能存在时效或环境差异。建议你在参考信息或使用功能时，结合自己的判断与实际情况做决定。如果你对某个模块有疑问，不妨先查阅常见问题，或直接在 <a href="https://ai-jingjibao.com">竞技宝</a> 站内寻找最新说明。
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-section">
+        <div class="faq-item">
+            <h3>竞技宝主要面向哪些人？</h3>
+            <p>希望获得轻量信息参考、基础辅助功能的普通用户，无需专业背景即可使用。</p>
+        </div>
+        <div class="faq-item">
+            <h3>平台内容多久更新？</h3>
+            <p>根据模块不同有所差异，常规内容保持周更或月更，重要变动会及时标注。</p>
+        </div>
+        <div class="faq-item">
+            <h3>是否收费？</h3>
+            <p>当前访问与基础功能无需付费。未来若有调整，会以显著方式提前告知。</p>
+        </div>
+        <div class="faq-item">
+            <h3>如何反馈问题？</h3>
+            <p>通过站内提供的方式提交即可，团队会定期查看并回复，耐心是美德。</p>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        本页面为产品说明，内容仅供参考。实际体验以 <a href="https://ai-jingjibao.com">竞技宝</a> 站点为准。保持合理预期，让工具回归工具。
+    </div>
+
+</div>
+</body>
+</html>
